@@ -1,0 +1,38 @@
+while True:
+    print("Многофункциональный калькулятор")
+    print("1-проценты")
+    print("2-скидки")
+    print("3-кредиты")
+    print("4-банковские кредиты")
+    print("5-выход")
+    number_task=input("Введите число от 1 до 5")
+    if number_task=="1":
+       print("Калькулятор процентов")
+       number=float(input("Введите число"))
+       procent=float(input("Введите проценты"))
+       result=number*(procent/100)
+       print(result,"%")
+    elif number_task=="2":
+        print("Калькультор скидок")
+        prices=int(input("Введите цену товара"))
+        procent=int(input("Введите скидку в процентах"))
+        skidka=prices*(procent/100)
+        final_price=prices-skidka
+        print("Цена со скидкой=", final_price)
+    elif number_task=="3":
+        print("Калькулятор кредита")
+        credit=float(input("Введите сумму кредитов"))
+        time=float(input("Введите срок"))
+        price=credit/time
+        print("За",time,"месяцев будете платить",price,"за один месяц")
+    elif number_task=="4":
+        start=float(input("Введите начальную сумму"))
+        rate=float(input("Введите проценти"))
+        years=float(input("Введите количество лет"))
+        result=start * (1 + rate / 100) ** years
+        print(result)
+    elif number_task=="5":
+        print("Вы вышли из калькулятора!")
+        break
+    else:
+        print("Пожайлуста!Введите цифри от 1 до 5")
